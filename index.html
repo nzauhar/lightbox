@@ -2,38 +2,90 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link href="css/lightbox.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/lightbox.css" rel="stylesheet">
 	
 	<title>Meet Stella Chicken "Bear" Zauhar</title>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://unpkg.com/web-animations-js@2.3.1/web-animations.min.js"></script>
+<script src="https://unpkg.com/hammerjs@2.0.8/hammer.min.js"></script>
+<script src="https://unpkg.com/muuri@0.7.1/dist/muuri.min.js"></script>
+
+
 
 </head>
 <body>
-	<div class = "gallery">
-		<a href="images/bear-chair.png" data-lightbox="images" data-title="Meet Bear!" data-alt="Bear on a cheetah print chair"><img src="images/bear-chair.png" alt="Bear on a cheetah print chair"></a>
+<main>
+	<h1>Meet Stella Chicken "Bear" Zauhar!</h1>
 
-		<a href="images/bear-comp.png" data-lightbox="images" data-title="Bear is techie dog" data-alt="Bear using the computer"><img src="images/bear-comp.png" alt="Bear using the computer"></a>
+	<div class = "gallery grid">
+
+			<div class = "item">
+				<div class="item-content">
+				<a href="images/bear-chair.png" data-lightbox="images" data-title="Bear is a little animal!" data-alt="Bear on a cheetah print chair"><img src="images/bear-chair.png" alt="Bear on a cheetah print chair"></a>
+				</div>
+				</div>
+
+			<div class = "item">
+				<div class="item-content">
+				<a href="images/bear-comp.png" data-lightbox="images" data-title="She is into tech" data-alt="Bear using the computer"><img src="images/bear-comp.png" alt="Bear using the computer"></a>
+				</div>
+				</div>
+
+			<div class = "item">
+				<div class="item-content">
+				<a href="images/bear-winter.png" data-lightbox="images" data-title="She is also into winter fashions" data-alt="Bear and I dressed up in our puffy winter coats" ><img src="images/bear-winter.png" alt="Bear and I dressed up in our puffy winter coats"></a>
+				</div>
+				</div>
 		
-		<a href="images/bear-winter.png" data-lightbox="images" data-title="Bear needs to bundle up in the winter time" data-alt="Bear and I dressed up in our puffy winter coats" ><img src="images/bear-winter.png" alt="Bear and I dressed up in our puffy winter coats"></a>
-		
-		<a href="images/bear-fall.png" data-lightbox="images" data-title="Bear likes the fall!" data-alt="Bear in the fall leaves"><img src="images/bear-fall.png" alt="Bear in the fall leaves"></a>
-		
-		<a href="images/bear-home.png" data-lightbox="images" data-title="She can hide just about anywhere" data-alt="Bear in a book shelf"><img src="images/bear-home.png" alt="Bear in a book shelf"></a>
-		
-		<a href="images/bear-travel.png" data-lightbox="images" data-title="She is the perfect carry-on" data-alt="Bear inside a purse with the caption travel-sized"><img src="images/bear-travel.png" alt="Bear inside a purse with the caption travel-sized"></a>
-		
-		<a href="images/bear-chicken.JPG" data-lightbox="images" data-title="Bear LOVES chicken!" data-alt="Bear posing for a photo with chicken on her lip"><img src="images/bear-chicken.JPG" alt="Bear posing for a photo with chicken on her lip"></a>
-		
-		<a href="images/bear-xmas.png" data-lightbox="images" data-title="She is my best friend" data-alt="Bear and I wearing matching elf hats in front of the Christmas tree"><img src="images/bear-xmas.png" alt="Bear and I wearing matching elf hats in front of the Christmas tree"></a>
-		
-		<a href="images/bear-sbux.png" data-lightbox="images" data-title="Bear can be basic at times" data-alt="Bear ordering a puppichino at the Starbucks drive-thru"><img src="images/bear-sbux.png" alt="Bear ordering a puppichino at the Starbucks drive-thru"></a>
-	
+			<div class = "item">
+				<div class="item-content">
+				<a href="images/bear-fall.png" data-lightbox="images" data-title="Bear likes the fall!" data-alt="Bear in the fall leaves"><img src="images/bear-fall.png" alt="Bear in the fall leaves"></a>
+				</div>
+				</div>
+			
+			<div class = "item">
+				<div class="item-content">
+				<a href="images/bear-home.png" data-lightbox="images" data-title="She can hide just about anywhere" data-alt="Bear in a book shelf"><img src="images/bear-home.png" alt="Bear in a book shelf"></a>
+				</div>
+				</div>
+
+			<div class = "item">
+				<div class="item-content">	
+				<a href="images/bear-travel.png" data-lightbox="images" data-title="And she is the perfect carry-on" data-alt="Bear inside a purse with the caption travel-sized"><img src="images/bear-travel.png" alt="Bear inside a purse with the caption travel-sized"></a>
+				</div>
+				</div>
+
+			<div class = "item">
+				<div class="item-content">	
+				<a href="images/bear-chicken.JPG" data-lightbox="images" data-title="Note the little bit of chicken on her mouth" data-alt="Bear posing for a photo with chicken on her lip"><img src="images/bear-chicken.JPG" alt="Bear posing for a photo with chicken on her lip"></a>
+				</div>
+				</div>
+
+			<div class = "item">
+				<div class="item-content">	
+				<a href="images/bear-xmas.png" data-lightbox="images" data-title="Bear is my best friend" data-alt="Bear and I wearing matching elf hats in front of the Christmas tree"><img src="images/bear-xmas.png" alt="Bear and I wearing matching elf hats in front of the Christmas tree"></a>
+				</div>
+				</div>
+			
+			<div class = "item">
+				<div class="item-content">	
+				<a href="images/bear-sbux.png" data-lightbox="images" data-title="As special as Bear is, she can be basic at times too" data-alt="Bear ordering a puppichino at the Starbucks drive-thru"><img src="images/bear-sbux.png" alt="Bear ordering a puppichino at the Starbucks drive-thru"></a>
+				</div>
+				</div>
+
 	</div>
-
+</main>
+<script>
+var grid = new Muuri('.grid', {
+    dragEnabled: true,
+    }
+  );
+  </script>
 <script src="js/lightbox.js"></script>
+
 
 </body>
 </html> 
